@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Purchase</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='static.css') }}">
+</head>
+
+<body>
+
+<div class="box">
+  <h2>Add Purchase</h2>
+
+  {% with messages = get_flashed_messages(category_filter=["all"]) %}
+    {% for msg in messages %}
+      <p class="success">{{ msg }}</p>
+    {% endfor %}
+  {% endwith %}
+
+  <form method="POST">
+
+    <label>Name</label><br>
+    <input type="text" name="name"><br>
+
+    {% with messages = get_flashed_messages(category_filter=["name"]) %}
+      {% for msg in messages %}
+        <p class="error">{{ msg }}</p>
+      {% endfor %}
+    {% endwith %}
+
+    <label>Amount</label><br>
+    <input type="number" name="amount"><br>
+
+    {% with messages = get_flashed_messages(category_filter=["amount"]) %}
+      {% for msg in messages %}
+        <p class="error">{{ msg }}</p>
+      {% endfor %}
+    {% endwith %}
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>

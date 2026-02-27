@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box; /* This keeps your inputs from overflowing */
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f0f2f5; /* A slightly cooler gray */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.box {
+  width: 350px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px; /* Softer corners */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Softer, realistic shadow */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+label {
+  font-size: 14px;
+  color: #666;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: #4CAF50; /* Changes color when you click it */
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.error {
+  color: #ff4d4d;
+  font-size: 13px;
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+
+.success {
+  color: #2ecc71;
+  text-align: center;
+  font-weight: bold;
+}
