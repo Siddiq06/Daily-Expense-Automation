@@ -1,34 +1,59 @@
-# Daily Expense Tracker & Automation Pipeline
+Daily Expense Tracker & Automation Pipeline
 
-A Full-Stack Python application designed to streamline daily expense logging and automate financial reporting. 
+A full-stack Python project that simplifies daily expense tracking and automates report generation.
 
-## 📌 Project Overview
-This project consists of a **Flask-based web interface** for data entry and an **automated backend pipeline** that processes, summarizes, and archives data daily. It replaces manual bookkeeping with a structured, reliable digital system.
+📌 Project Overview
 
-## 🛠️ Tech Stack
-* **Backend:** Python 3.x, Flask
-* **Database:** MySQL
-* **Automation:** Python (OS, Shutil, CSV libraries)
-* **OS Integration:** Windows Task Scheduler
+This project includes a Flask-based web application for entering expenses and a backend automation system that generates daily reports and backups. It demonstrates real-world backend development using database integration and scheduled automation.
 
-## 📂 Project Structure
-* `app.py` - The core Flask application handling web requests and MySQL database operations.
-* `backup_job.py` - The automation script that performs ETL (Extract, Transform, Load) tasks.
-* `requirements.txt` - File containing all external dependencies for easy environment setup.
-* `/main` - Directory for active daily logs.
-* `/backup` - Directory for date-wise archived summaries and CSVs.
+🛠️ Tech Stack
 
-## ⚙️ How It Works
-1. **Data Entry:** The user enters the item name and amount via the Flask web UI.
-2. **Persistence:** Data is saved into a MySQL database for real-time access.
-3. **Daily Export:** The system generates a CSV file from the database.
-4. **Automation Pipeline:** The `backup_job.py` script runs automatically (via Task Scheduler) to:
-    - Read the day's CSV.
-    - Calculate total items and total expenditure.
-    - Generate a `summary.csv`.
-    - Archive all files into a date-stamped folder and clear the active directory.
+Backend: Python, Flask
 
-## 🚀 Setup Instructions
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
+Database: MySQL
+
+Automation: Python (os, shutil, csv)
+
+Scheduling: Windows Task Scheduler
+
+📂 Project Structure
+
+app.py – Flask app for handling user input and storing data in MySQL
+
+backup_job.py – Automation script for report generation and backups
+
+requirements.txt – Project dependencies
+
+/main – Stores daily generated CSV files
+
+/backup – Stores archived reports and summaries
+
+⚙️ How It Works
+
+User Input: Expenses are entered through a Flask web form.
+
+Database Storage: Data is stored in a MySQL database.
+
+Daily CSV Export: The app generates a CSV file for the current day.
+
+Automation Script: A scheduled Python script:
+
+Reads the daily CSV
+
+Calculates total items and total expense
+
+Creates a summary report
+
+Archives data into a date-wise backup folder
+
+🚀 Key Features
+
+Daily expense tracking with web UI
+
+MySQL database integration
+
+Automated CSV generation
+
+Scheduled backup and summarization
+
+Real-world automation workflow
